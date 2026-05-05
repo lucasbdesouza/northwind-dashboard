@@ -1,6 +1,6 @@
 # 📊 Dashboard Northwind Traders - Análise de Vendas
 
-<img src="https://github.com/lucasbdesouza/northwind-dashboard/blob/main/preview.png">
+![Dashboard](preview.png)
 
 ## Objetivo
 
@@ -69,48 +69,6 @@ O dashboard foi estruturado em uma única página com foco em clareza e usabilid
 * Top produtos
 * Top clientes
 * Análise de descontos
-
----
-
-## Modelagem e Tratamento de Dados
-
-* Tabela fato: `order_details`
-* Tabelas dimensão: `orders`, `customers`, `products`, `categories`, `employees`, `shippers`
-* Criação de medidas DAX para cálculo dos indicadores
-* Validação do campo de desconto para garantir consistência nos cálculos
-
----
-
-## Tecnologias Utilizadas
-
-* Power BI
-* DAX
-* Modelagem de dados
-
----
-
-## Estrutura do Repositório
-
-```
-northwind-dashboard/
- ┣ dashboard.pbix
- ┣ preview.png
- ┗ README.md
-```
-
----
-
-## Preview
-
-![Dashboard](preview.png)
-
----
-
-## Como Utilizar
-
-1. Baixe o arquivo `.pbix`
-2. Abra no Power BI Desktop
-3. Utilize os filtros para explorar os dados
 
 ---
 
