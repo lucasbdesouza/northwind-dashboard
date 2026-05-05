@@ -2,70 +2,118 @@
 
 <img src="https://github.com/lucasbdesouza/northwind-dashboard/blob/main/preview.png">
 
-## 🎯 Objetivo
+## Objetivo
 
-Este projeto tem como objetivo transformar dados transacionais da base **Northwind Traders** em uma ferramenta de apoio à decisão, com foco em clareza, usabilidade e geração de insights acionáveis para o negócio.
-
-O dashboard foi desenvolvido no Power BI com uma abordagem enxuta, consolidando as principais análises em uma única página para facilitar a leitura executiva.
+Desenvolver um dashboard no Power BI capaz de transformar dados transacionais em informações claras e úteis para apoiar a tomada de decisão, com foco em desempenho de vendas.
 
 ---
 
-## 🧠 Perguntas de Negócio
+## Perguntas de Negócio
 
-O dashboard responde às seguintes perguntas:
+O dashboard foi construído para responder:
 
-* O negócio está crescendo ou retraindo?
-* Qual o comportamento da receita ao longo do tempo?
-* Quais categorias e produtos mais impactam o faturamento?
+* O negócio está crescendo ou apresentando queda?
+* Qual a tendência da receita ao longo do tempo?
+* Quais categorias mais impactam o faturamento?
+* Quais produtos têm maior contribuição para a receita?
 * Quem são os principais clientes?
-* Os descontos estão impactando negativamente a receita?
+* O nível de desconto está impactando a performance?
 
 ---
 
-## 📊 Principais KPIs
+## KPIs e Indicadores
 
-* **Receita Total** → Volume total de vendas
-* **Crescimento (%)** → Variação em relação ao período anterior
-* **Ticket Médio** → Receita média por pedido
-* **Total de Pedidos** → Volume de transações
-* **Status do Negócio** → Indicador sintético da saúde do negócio
+**Receita Total**
+Soma do valor vendido considerando preço, quantidade e desconto. Representa o volume financeiro do negócio.
+
+**Crescimento (%)**
+Variação percentual da receita em relação ao período anterior. Indica aceleração ou retração.
+
+**Ticket Médio**
+Receita média por pedido. Ajuda a entender o valor gerado por transação.
+
+**Total de Pedidos**
+Quantidade total de pedidos realizados. Mede o volume de operações.
+
+**Status do Negócio**
+Indicador baseado em regras (crescimento e ticket médio) que resume a situação do negócio de forma rápida.
 
 ---
 
-## 🧩 Estrutura do Dashboard
+## Justificativa do Design
 
-O dashboard foi estruturado em uma única página, dividida em três blocos principais:
+O dashboard foi estruturado em uma única página com foco em clareza e usabilidade.
 
-### 1. Visão Executiva
+* **Clareza**: evita navegação entre múltiplas páginas
+* **Hierarquia visual**: KPIs no topo, tendência no centro e análises detalhadas abaixo
+* **Foco em decisão**: cada visual responde a uma pergunta específica
+* **Simplicidade**: uso reduzido de cores e eliminação de elementos desnecessários
+
+---
+
+## Estrutura do Dashboard
+
+**Visão Executiva**
 
 * KPIs principais
-* Status do negócio (alerta visual)
+* Indicador de status
 
-### 2. Análise de Tendência
+**Tendência**
 
 * Receita ao longo do tempo
-* Identificação de crescimento ou queda
+* Comparação com período anterior
 
-### 3. Diagnóstico
+**Diagnóstico**
 
 * Receita por categoria
 * Top produtos
 * Top clientes
-* Análise de descontos por produto
+* Análise de descontos
 
 ---
 
-## 💡 Principais Insights
+## Modelagem e Tratamento de Dados
 
-* A performance do negócio pode ser rapidamente avaliada através do indicador de crescimento e status.
-* A receita apresenta variações ao longo do tempo, permitindo identificar tendências e sazonalidade.
-* Algumas categorias concentram maior participação no faturamento.
-* Descontos elevados em determinados produtos podem impactar a eficiência das vendas.
+* Tabela fato: `order_details`
+* Tabelas dimensão: `orders`, `customers`, `products`, `categories`, `employees`, `shippers`
+* Criação de medidas DAX para cálculo dos indicadores
+* Validação do campo de desconto para garantir consistência nos cálculos
+
+---
+
+## Tecnologias Utilizadas
+
+* Power BI
+* DAX
+* Modelagem de dados
 
 ---
 
-## 📌 Considerações Finais
+## Estrutura do Repositório
 
-Este projeto foi desenvolvido com foco em simplicidade, clareza e geração de valor para o negócio, evitando excesso de informações e priorizando insights acionáveis.
+```
+northwind-dashboard/
+ ┣ dashboard.pbix
+ ┣ preview.png
+ ┗ README.md
+```
 
 ---
+
+## Preview
+
+![Dashboard](preview.png)
+
+---
+
+## Como Utilizar
+
+1. Baixe o arquivo `.pbix`
+2. Abra no Power BI Desktop
+3. Utilize os filtros para explorar os dados
+
+---
+
+## Considerações Finais
+
+O projeto foi desenvolvido com foco em simplicidade, clareza e geração de valor, priorizando insights relevantes em vez de volume de informação.
