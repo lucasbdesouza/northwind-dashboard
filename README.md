@@ -48,6 +48,8 @@ O dashboard foi estruturado em uma única página com foco em clareza e usabilid
 * **Hierarquia visual**: KPIs no topo, tendência no centro e análises detalhadas abaixo
 * **Foco em decisão**: cada visual responde a uma pergunta específica
 * **Simplicidade**: uso reduzido de cores e eliminação de elementos desnecessários
+* **Tema escuro**: adotado para reduzir fadiga visual em análises prolongadas e melhorar o contraste dos elementos principais
+
 
 ---
 
